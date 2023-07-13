@@ -3,7 +3,7 @@ import GenerateSchema from './json.js';
 export namespace Util {
     export function generateSchema(input: any): any {
         let schema = GenerateSchema(input)
-        delete schema['$schema'];
+        delete schema['$schema']; // @ts-ignore
         return schema;
     }
 
